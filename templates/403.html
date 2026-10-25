@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Accès refusé — SkillForge{% endblock %}
+{% block content %}
+<section class="error-page" aria-labelledby="error-title">
+    <span class="eyebrow">Erreur 403</span>
+    <h1 id="error-title">Accès refusé</h1>
+    <p>Vous n’avez pas l’autorisation de consulter cette page.</p>
+    <a class="btn btn-primary" href="{% url 'home' %}">Retour à l’accueil</a>
+</section>
+{% endblock %}
