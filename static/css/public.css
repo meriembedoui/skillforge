@@ -1,0 +1,3 @@
+/* Compatibility entrypoint for earlier public templates. */
+@import url('home.css');
+@import url('responsive.css');

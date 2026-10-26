@@ -4,30 +4,23 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="SkillForge, une plateforme d’apprentissage par compétences avec mentorat, progression personnalisée et évaluation assistée par intelligence artificielle.">
+    <meta name="description" content="SkillForge : apprenez à votre rythme, progressez avec un accompagnement personnalisé et valorisez vos compétences.">
     <title>{% block title %}SkillForge{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preload" href="{% static 'fonts/InterVariable.woff2' %}" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components.css' %}">
+    <link rel="icon" href="{% static 'images/favicon.svg' %}" type="image/svg+xml">
+    {% block extra_css %}{% endblock %}
     <script src="{% static 'js/main.js' %}" defer></script>
+    {% block extra_js %}{% endblock %}
 </head>
-<body>
+<body class="{% block body_class %}public-layout{% endblock %}">
     <a class="skip-link" href="#contenu-principal">Aller au contenu principal</a>
-    <header class="site-header">
-        <nav class="container navbar" aria-label="Navigation principale">
-            <a class="brand" href="{% url 'home' %}">SkillForge<span class="brand-dot" aria-hidden="true">.</span></a>
-            <ul class="nav-links">
-                <li><a href="{% url 'home' %}"{% if request.resolver_match.url_name == 'home' %} aria-current="page"{% endif %}>Accueil</a></li>
-                <li><span class="nav-placeholder">Modules <span class="badge">À venir</span></span></li>
-            </ul>
-        </nav>
-    </header>
-    <main id="contenu-principal" class="container" tabindex="-1">
+    {% block navigation %}{% include 'components/navbar.html' %}{% endblock %}
+    <main id="contenu-principal" class="{% block main_class %}container{% endblock %}" tabindex="-1">
+        {% include 'components/messages.html' %}
         {% block content %}{% endblock %}
     </main>
-    <footer class="site-footer">
-        <div class="container footer-content">
-            <span class="brand">SkillForge</span>
-            <p>Apprendre et progresser ensemble.</p>
-        </div>
-    </footer>
+    {% include 'components/footer.html' %}
 </body>
 </html>

@@ -1,0 +1,7 @@
+.workspace { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 2rem; padding-top: 2rem; }
+.workspace-sidebar { padding: 1.5rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-secondary); align-self: start; }
+.workspace-sidebar a { display: block; padding-block: 0.75rem; }
+.workspace-label { font-weight: 700; margin-bottom: 0.5rem; }
+.workspace-content { min-width: 0; }
+.workspace-content .page-header h1 { font-size: clamp(1.8rem, 3vw, 2.6rem); }
+@media (max-width: 768px) { .workspace { grid-template-columns: 1fr; gap: 1rem; } }

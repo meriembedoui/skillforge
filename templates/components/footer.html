@@ -1,0 +1,8 @@
+<footer class="site-footer">
+    <div class="container footer-main">
+        <div class="footer-brand"><a class="brand" href="{% url 'home' %}" aria-label="SkillForge, accueil">{% include 'components/brand.html' %}</a><p>Le savoir prend forme.<br>Votre avenir aussi.</p></div>
+        <nav aria-label="Navigation de pied de page"><p class="footer-label">Explorer SkillForge</p><a href="{% url 'home' %}#fonctionnalites">La plateforme</a><a href="{% url 'home' %}#fonctionnement">Notre approche</a><a href="{% url 'home' %}#a-propos">À propos du projet</a></nav>
+        <div class="footer-project"><span class="badge">Projet académique</span><p>Une plateforme d’apprentissage par compétences, pensée pour avancer ensemble.</p></div>
+    </div>
+    <div class="container footer-bottom"><small>© {% now 'Y' %} SkillForge</small><small>De la curiosité au savoir-faire.</small></div>
+</footer>

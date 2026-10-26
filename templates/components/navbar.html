@@ -1,0 +1,10 @@
+<header class="site-header">
+    <nav class="container navbar" aria-label="Navigation principale">
+        <a class="brand" href="{% url 'home' %}" aria-label="SkillForge, accueil">{% include 'components/brand.html' %}</a>
+        <ul class="nav-links nav-links-desktop">{% include 'components/navigation_links.html' %}</ul>
+        <details class="mobile-navigation" data-mobile-menu>
+            <summary class="menu-toggle">{% include 'components/icon.html' with name='menu' %}<span>Menu</span></summary>
+            <ul class="nav-links nav-links-mobile">{% include 'components/navigation_links.html' %}</ul>
+        </details>
+    </nav>
+</header>

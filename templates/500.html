@@ -1,10 +1,11 @@
-{% extends 'base.html' %}
+{% extends 'layouts/public.html' %}
 {% block title %}Erreur du serveur — SkillForge{% endblock %}
 {% block content %}
 <section class="error-page" aria-labelledby="error-title">
-    <span class="eyebrow">Erreur 500</span>
-    <h1 id="error-title">Une erreur est survenue</h1>
-    <p>Le service est temporairement indisponible. Veuillez réessayer plus tard.</p>
-    <a class="btn btn-primary" href="{% url 'home' %}">Retour à l’accueil</a>
+    <div class="error-decoration">{% include 'components/icon.html' with name='layers' %}</div>
+    <span class="error-code" aria-hidden="true">500</span>
+    <h1 id="error-title">Une petite pause sur le parcours.</h1>
+    <p>Une erreur est survenue. Le service est temporairement indisponible ; veuillez réessayer dans quelques instants.</p>
+    <a class="btn btn-primary" href="{% url 'home' %}">Retour à l’accueil {% include 'components/icon.html' with name='arrow' %}</a>
 </section>
 {% endblock %}

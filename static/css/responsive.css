@@ -1,0 +1,56 @@
+/* Landing breakpoints; shared component responsiveness lives in components.css. */
+@media (max-width: 1100px) {
+    .hero { gap: 1.5rem; }
+    .hero-actions .btn { padding-inline: 1rem; }
+    .preview-section, .about-section { gap: 3rem; }
+    .steps-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem 1.5rem; }
+    .features-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .feature-wide, .feature-passport { grid-column: auto; }
+}
+@media (max-width: 800px) {
+    .hero { grid-template-columns: 1fr; padding-top: 3rem; gap: 1.5rem; }
+    .hero-copy { max-width: 610px; padding-bottom: 0; }
+    .hero h1 { max-width: 570px; }
+    .hero-visual { width: min(100%, 500px); margin-inline: auto; }
+    .section { padding-block: 3rem; }
+    .section-heading { align-items: start; flex-direction: column; gap: 1rem; }
+    .section-heading > p { max-width: 450px; }
+    .features-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .preview-section, .about-section { grid-template-columns: 1fr; gap: 2rem; }
+    .preview-copy { max-width: 600px; }
+    .platform-preview { width: min(100%, 530px); margin-inline: auto; }
+    .about-art { width: min(100%, 420px); margin-inline: auto; }
+    .about-copy { max-width: 650px; }
+    .intro-strip { font-size: .7rem; gap: .75rem; }
+}
+@media (max-width: 480px) {
+    .hero { padding-block: 2.5rem 2rem; }
+    .hero h1 { font-size: 2.5rem; line-height: 1.15; }
+    .hero-eyebrow { font-size: .7rem; }
+    .hero-description { font-size: .95rem; }
+    .hero-actions { gap: .65rem; }
+    .hero-actions .btn { width: 100%; }
+    .hero-promises { justify-content: space-between; gap: .5rem; font-size: .75rem; }
+    .hero-visual { min-height: 485px; }
+    .journey-board { padding: 1.1rem; margin-inline: .5rem; }
+    .board-heading .badge { font-size: .7rem; }
+    .floating-note { padding: .7rem; gap: .5rem; }
+    .floating-note strong { font-size: .75rem; }
+    .note-bottom { bottom: -2px; }
+    .hero-visual > figcaption { font-size: .75rem; bottom: -28px; }
+    .intro-strip { flex-direction: column; gap: .4rem; text-align: center; padding-block: 1rem; }
+    .intro-strip .strip-star { display: none; }
+    .steps-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.75rem 1rem; }
+    .steps-grid p { font-size: .8rem; }
+    .features-grid { grid-template-columns: 1fr; }
+    .feature-card { padding: 1.5rem; }
+    .feature-card p { margin-bottom: 1.25rem; }
+    .preview-content { padding: 1rem; }
+    .preview-overview { padding: .85rem 1rem; }
+    .preview-toolbar { font-size: .75rem; gap: .3rem; }
+    .preview-toolbar .badge { font-size: .7rem; }
+    .platform-preview > figcaption { font-size: .75rem; }
+    .preview-copy .illustration-disclaimer { font-size: .8rem; }
+    .closing-section { padding: 2.5rem 1.25rem; }
+    .closing-section h2 { font-size: 1.75rem; }
+}

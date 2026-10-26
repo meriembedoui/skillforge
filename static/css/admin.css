@@ -1,0 +1,7 @@
+/* Fondation d’un futur back-office ; ne remplace pas django.contrib.admin. */
+.admin-layout { background: #f6f4f1; }
+.admin-layout .workspace { grid-template-columns: 200px minmax(0, 1fr); gap: 1.25rem; }
+.admin-layout .workspace-sidebar { background: var(--color-white); border-radius: var(--radius-sm); }
+.admin-layout .card { padding: 1rem; border-radius: var(--radius-sm); }
+.admin-layout th, .admin-layout td { padding: 0.6rem 0.8rem; font-size: 0.9rem; }
+@media (max-width: 768px) { .admin-layout .workspace { grid-template-columns: 1fr; } }

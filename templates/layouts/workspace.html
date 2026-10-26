@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/workspace.css' %}">
+{% block role_css %}{% endblock %}
+{% endblock %}
+{% block content %}
+<div class="workspace">
+    <aside class="workspace-sidebar" aria-label="Espace de travail">
+        <p class="workspace-label">{% block workspace_label %}Espace SkillForge{% endblock %}</p>
+        {% block workspace_navigation %}
+        <a href="{% url 'home' %}">Retour à l’accueil</a>
+        <span class="badge">Modules à venir</span>
+        {% endblock %}
+    </aside>
+    <div class="workspace-content">
+        {% include 'components/breadcrumbs.html' %}
+        <header class="page-header"><h1>{% block page_heading %}Votre espace de travail{% endblock %}</h1></header>
+        {% block workspace_content %}
+        <div class="empty-state"><p>Les modules de cet espace seront intégrés prochainement.</p></div>
+        {% endblock %}
+    </div>
+</div>
+{% endblock %}
